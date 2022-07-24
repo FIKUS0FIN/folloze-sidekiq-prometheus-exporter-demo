@@ -17,6 +17,9 @@ gem 'uglifier', '>= 1.3.0'
 gem 'mini_racer', platforms: :ruby
 
 gem "sidekiq"
+gem 'newrelic_rpm'
+# # gem 'newrelic-sidekiq-metrics'
+# gem 'newrelic_sidekiq_plugin'
 
 gem "yabeda-rails"
 gem "yabeda-sidekiq", "~> 0.1.1"
