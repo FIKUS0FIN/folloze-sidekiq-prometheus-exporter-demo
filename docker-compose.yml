@@ -44,7 +44,7 @@ services:
       - 3000:3000/tcp
     volumes: 
       - ./grafana_db:/var/lib/grafana
-    user: "104"
+    user: "0"
 
   prometheus:
     image: prom/prometheus
