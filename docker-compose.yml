@@ -13,7 +13,6 @@ services:
       - 5000:5000
     environment:
       REDIS_URL: redis://redis:6379/0
-      RAILS_ENV: staging
     stdin_open: true
     tty: true
     depends_on:
