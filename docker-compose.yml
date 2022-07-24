@@ -57,6 +57,7 @@ services:
       - 9090:9090/tcp
     depends_on:
       - rails
+    user: root
 
     command:
       - --config.file=/etc/prometheus/prometheus.yml
