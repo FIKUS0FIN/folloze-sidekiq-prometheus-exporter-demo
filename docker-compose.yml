@@ -67,4 +67,4 @@ services:
     image: rails_stressor
     depends_on:
       - rails
-    command: -z 2m -c 15 -m GET http://rails:5000
+    command: -z 20m -c 150 -m GET http://rails:5000
