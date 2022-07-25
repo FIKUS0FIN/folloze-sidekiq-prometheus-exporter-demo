@@ -19,6 +19,7 @@ gem 'mini_racer', platforms: :ruby
 gem "sidekiq"
 gem 'newrelic_rpm'
 gem 'yabeda-newrelic'
+gem 'newrelic-infinite_tracing'
 # # gem 'newrelic-sidekiq-metrics'
 # gem 'newrelic_sidekiq_plugin'
 
