@@ -18,14 +18,12 @@ gem 'mini_racer', platforms: :ruby
 
 gem "sidekiq"
 gem 'newrelic_rpm'
-gem 'yabeda-newrelic'
 gem 'newrelic-infinite_tracing'
-# # gem 'newrelic-sidekiq-metrics'
-# gem 'newrelic_sidekiq_plugin'
 
 gem "yabeda-rails"
 gem "yabeda-sidekiq", "~> 0.1.1"
-# gem "yabeda-prometheus"
+gem "yabeda-prometheus"
+gem 'yabeda-newrelic'
 gem "yabeda-puma-plugin"
 
 # Since v0.1.4 yabeda-prometheus can work either with official client
