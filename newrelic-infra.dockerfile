@@ -1,0 +1,15 @@
+
+
+FROM golang:1.18 as builder
+COPY nri-redis-master/ /go/src/github.com/newrelic/nri-redis/
+RUN cd /go/src/github.com/newrelic/nri-redis && \
+    make compile && \
+    strip ./bin/nri-redis
+
+FROM newrelic/infrastructure:latest
+ENV NRIA_IS_FORWARD_ONLY true
+ENV NRIA_K8S_INTEGRATION true
+ADD newrelic-infra.yml /etc/newrelic-infra.yml
+ADD redis-config.yml /etc/newrelic-infra/integrations.d/redis-config.yml
+COPY --from=builder /go/src/github.com/newrelic/nri-redis/bin/nri-redis /nri-sidecar/newrelic-infra/newrelic-integrations/bin/nri-redis
+
