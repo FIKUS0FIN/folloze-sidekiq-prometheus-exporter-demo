@@ -76,9 +76,9 @@ services:
       - 9121:9121
 
   elasticsearch_exporter:
-    image: justwatch/elasticsearch_exporter:1.1.0
+    image: quay.io/prometheuscommunity/elasticsearch-exporter:latest
     command:
-     - '-es.uri=https://elastic:23LAqK8Y1QpGZDjsnFZxBGnl@initial-dep.es.ap-northeast-2.aws.elastic-cloud.com/'
+     - '--es.uri=https://elastic:23LAqK8Y1QpGZDjsnFZxBGnl@initial-dep.es.ap-northeast-2.aws.elastic-cloud.com/'
     restart: always
     ports:
     - 9114:9114
