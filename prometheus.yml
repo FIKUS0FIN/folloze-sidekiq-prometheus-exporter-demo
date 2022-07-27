@@ -18,6 +18,8 @@ scrape_configs:
   static_configs:
     - targets:
       - 'sidekiq:5100'
-- job_name: redis_exporter
+- job_name: redis_exporter_targets
+  metrics_path: /scrape
   static_configs:
-  - targets: [':9121']
+  - targets: ['redis-exporter:9121']
+  
