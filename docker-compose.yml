@@ -75,4 +75,14 @@ services:
       ports:
       - 9121:9121
 
+  elasticsearch_exporter:
+    image: justwatch/elasticsearch_exporter:1.1.0
+    command:
+     - '-es.uri=https://elastic:23LAqK8Y1QpGZDjsnFZxBGnl@initial-dep.es.ap-northeast-2.aws.elastic-cloud.com/'
+    restart: always
+    ports:
+    - 9114:9114
+
+
+#grafana dachboards 14091 redis 
 
