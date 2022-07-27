@@ -1,9 +1,9 @@
 global:
   scrape_interval: 15s
   evaluation_interval: 15s
-# remote_write:
-# - url: https://metric-api.newrelic.com/prometheus/v1/write?prometheus_server=demo-prom-test-source
-#   bearer_token: 082dda0ab502455631374641ee8969422801NRAL
+remote_write:
+- url: https://metric-api.newrelic.com/prometheus/v1/write?prometheus_server=demo-prom-test-source
+  bearer_token: 082dda0ab502455631374641ee8969422801NRAL
 
 scrape_configs:
 - job_name: 'rails'
