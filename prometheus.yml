@@ -6,18 +6,18 @@ remote_write:
   bearer_token: 082dda0ab502455631374641ee8969422801NRAL
 
 scrape_configs:
-- job_name: 'rails'
-  scheme: http
-  metrics_path: '/metrics'
-  static_configs:
-    - targets:
-      - 'rails:5000'
-- job_name: 'sidekiq'
-  scheme: http
-  metrics_path: '/metrics'
-  static_configs:
-    - targets:
-      - 'sidekiq:5100'
+# - job_name: 'rails'
+#   scheme: http
+#   metrics_path: '/metrics'
+#   static_configs:
+#     - targets:
+#       - 'rails:5000'
+# - job_name: 'sidekiq'
+#   scheme: http
+#   metrics_path: '/metrics'
+#   static_configs:
+#     - targets:
+#       - 'sidekiq:5100'
 - job_name: redis_exporter_targets
   metrics_path: /metrics
   static_configs:

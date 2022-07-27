@@ -7,28 +7,28 @@ x-app-service-template: &app
     - ./rails_app:/app
 
 services:
-  rails:
-    <<: *app
-    ports:
-      - 5000:5000
-    environment:
-      REDIS_URL: redis://redis:6379/0
-    stdin_open: true
-    tty: true
-    depends_on:
-      - redis
+  # rails:
+  #   <<: *app
+  #   ports:
+  #     - 5000:5000
+  #   environment:
+  #     REDIS_URL: redis://redis:6379/0
+  #   stdin_open: true
+  #   tty: true
+  #   depends_on:
+  #     - redis
 
-    command: bundle exec puma -C config/puma.rb
+  #   command: bundle exec puma -C config/puma.rb
 
-  sidekiq:
-    <<: *app
-    ports:
-      - 5100:5100
-    environment:
-      PORT: 5100
-      REDIS_URL: redis://redis:6379/0
-    depends_on:
-      - redis
+  # sidekiq:
+  #   <<: *app
+  #   ports:
+  #     - 5100:5100
+  #   environment:
+  #     PORT: 5100
+  #     REDIS_URL: redis://redis:6379/0
+  #   depends_on:
+  #     - redis
 
     command: sidekiq -C config/sidekiq.yml
 
