@@ -74,3 +74,5 @@ services:
       command: -redis.addr redis://redis:6379
       ports:
       - 9121:9121
+
+
