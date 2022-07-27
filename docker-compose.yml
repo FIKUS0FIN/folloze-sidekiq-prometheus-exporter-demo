@@ -70,11 +70,11 @@ services:
     command: -z 20m -c 150 -m GET http://rails:5000
 
 
-  redis-exporter:
-      image: oliver006/redis_exporter
-      command: -redis.addr redis://redis:6379
-      ports:
-      - 9121:9121
+  # redis-exporter:
+  #     image: oliver006/redis_exporter
+  #     command: -redis.addr redis://redis:6379
+  #     ports:
+  #     - 9121:9121
   
 
   # agent:
