@@ -55,8 +55,8 @@ services:
       - ./prometheus:/prometheus
     ports:
       - 9090:9090/tcp
-    depends_on:
-      - rails
+    # depends_on:
+    #   - rails
     user: root
 
     command:
@@ -65,8 +65,8 @@ services:
   rails_stressor:
     build: rails_stressor
     image: rails_stressor
-    depends_on:
-      - rails
+    # depends_on:
+    #   - rails
     command: -z 20m -c 150 -m GET http://rails:5000
 
   redis-exporter:
