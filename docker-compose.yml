@@ -30,7 +30,7 @@ services:
   #   depends_on:
   #     - redis
 
-    command: sidekiq -C config/sidekiq.yml
+    # command: sidekiq -C config/sidekiq.yml
 
   redis:
     image: redis
