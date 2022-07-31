@@ -22,6 +22,7 @@ gem "yabeda-rails"
 gem "yabeda-sidekiq", "~> 0.1.1"
 gem "yabeda-prometheus"
 gem "yabeda-puma-plugin"
+
 gem 'yabeda-newrelic'
 gem 'newrelic_rpm'
 gem 'newrelic-infinite_tracing'

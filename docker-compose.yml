@@ -69,19 +69,6 @@ services:
     #   - rails
     command: -z 20m -c 150 -m GET http://rails:5000
 
-  # redis-exporter:
-  #     image: oliver006/redis_exporter
-  #     command: -redis.addr redis://redis:6379
-  #     ports:
-  #     - 9121:9121
-
-  # elasticsearch_exporter:
-  #   image: quay.io/prometheuscommunity/elasticsearch-exporter:latest
-  #   command:
-  #    - '--es.uri=https://elastic:23LAqK8Y1QpGZDjsnFZxBGnl@initial-dep.es.ap-northeast-2.aws.elastic-cloud.com/'
-  #   restart: always
-  #   ports:
-  #   - 9114:9114
 
 
 #grafana dachboards 14091 redis 14191 elastic
