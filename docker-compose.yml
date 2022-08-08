@@ -70,6 +70,3 @@ services:
     command: -z 20m -c 150 -m GET http://rails:5000
 
 
-
-#grafana dachboards 14091 redis 14191 elastic
-
